@@ -1,0 +1,92 @@
+@use 'variables' as *;
+
+// ==================== CARTAS ====================
+
+.carta {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.carta--principal {
+    height: 300px;
+    width: 400px;
+
+    background: $color-cartas; 
+
+    img {
+        width: 100px;
+    }
+}
+
+.carta--secundaria {
+    width: 450px;
+    background: $color-cartas;
+}
+
+.carta--reseña {
+    width: 450px;
+
+    background-color: $color-primario;
+    box-shadow: 0px 6px 114px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 200px;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
+
+.carta--pasos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    background: $color-cartas;
+    border-radius: 25px;
+
+    img {
+        width: 80%;
+    }
+}
+
+.cartas--planes {
+    padding: 35px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+    border: 4px solid $color-secundario;
+    border-radius: 25px;
+    background-color: $color-primario;
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        justify-content: start;
+
+        &::before {
+            content: "✔";
+            color: $color-active;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+}
+
+.profesional {
+    border-color: $color-destacado;
+    box-shadow: 0px 10px 30px rgba(74, 144, 226, 0.3);
+    transform: scale(1.05);
+}

@@ -1,0 +1,26 @@
+@use 'variables' as *;
+// ========= NAVBAR =========
+@use 'navbar' as *;
+// ========= FOOTER =========
+@use 'footer' as *;
+// ========= FORMULARIOS =========
+@use 'formularios' as *;
+// ========= BOTONES =========
+@use 'buttons' as *;
+// ========= CARDS =========
+@use 'cards' as *;
+
+// Estilos generales 
+.oculto {
+    display: none;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+} 

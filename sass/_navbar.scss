@@ -1,0 +1,70 @@
+@use 'variables' as *;
+.navbar {
+    background-color: transparent;
+    width: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navbar__logo img {
+    height: 60px;
+}
+
+.navbar__links {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+
+    li {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &.active {
+            background-color: #898787;
+            /* Azul marino */
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+
+.navbar__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+
+
+/* ------ NAVICON -> NAVBAR DE INICIO Y LOGIN ------*/
+.navIcon {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 25px 30px;
+    background-color: transparent;
+
+}
+
+.navIcon__logo img {
+    height: 80px;
+}

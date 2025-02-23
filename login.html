@@ -32,26 +32,46 @@
 
     <main>
 
-        <section class="form">
+        <section class="formulario">
 
             <h1>Iniciar Sesión</h1>
 
 
             <form action="" class="form__login" id="formLogin">
 
-                <div class="form__login__campos">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+                <div class="formulario__pasos" id="LoginInvalido">
+
+                    <div class="formulario--campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+                    </div>
+
+
+                    <div class="formulario--campo">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" name="contraseña" placeholder="password" required>
+                    </div>
+
+                    <div class="formulario--marca">
+                        <a href="recuperar-contraseña.html">¿Olvidaste tu contraseña?</a>
+
+                        <div>
+                            <input type="checkbox" id="recordar" name="recordar">
+                            <label for="recordar">Recordar mi cuenta</label>
+                        </div>
+
+
+                    </div>
+
+                    <div class="formulario--campo">
+                        <button type="submit" class="btn btn--primario">Iniciar sesión</button>
+                    </div>
+
                 </div>
 
-
-                <div class="form__login__campos">
-                    <label for="contraseña">Contraseña</label>
-                    <input type="password" id="contraseña" name="contraseña" placeholder="password" required>
+                <div class="form__paso oculto" id="ResgitroExitoso">
+                    <img src="assets/img/icons/check.png" alt="Registro exitoso">
                 </div>
-
-
-                <button type="submit" class="btn--primario btn__form">Iniciar sesión</button>
             </form>
 
         </section>

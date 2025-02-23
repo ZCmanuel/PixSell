@@ -1,149 +1,121 @@
-/* ---------------- BOTENES ANIMACIÓN---------------- */
+@charset "UTF-8";
+/* ---------------- BOTENES ANIMACIÓN ---------------- */
 @keyframes btnHover {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    100% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+.btn:hover {
+  animation: btnHover 0.3s ease forwards;
 }
 
-.btn--secundario:hover,
-.btn--primario:hover {
-    animation: btnHover 0.3s ease forwards;
+.btn--terciario:hover {
+  background-color: #4A90E2;
+  color: white !important;
+}
+
+.btn--destacado:hover {
+  background-color: #4A90E2;
+}
+
+/* --------------- CARTAS PASOS --------------- */
+.carta--pasos {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.carta--pasos.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ---------------- CARTAS ANIMACIÓN HOVER ---------------- */
 .carta:hover {
-    transform: scale(1.05);
-    background-color: #ffffff;
-    /* Un azul muy claro */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* ---------------- CARTAS PASOS ----------------*/
-
-
-.carta--pasos {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carta--pasos:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-
+  transform: scale(1.05);
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.319);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 /* ---------------- PLANES CARTAS ---------------- */
-.cartas--planes {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 35px;
-    width: 300px;
-    text-align: center;
-    border: 4px solid #c1c1c1;
-    border-radius: 25px;
-    background-color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
 .cartas--planes:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
-    background-color: #f7f9fc;
-    /* Cambia el fondo al hacer hover */
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  background-color: #f7f9fc;
+  /* Cambia el fondo al hacer hover */
 }
 
 /* Efecto hover para el plan profesional */
 .cartas--planes.profesional:hover {
-    transform: scale(1.1) translateY(-10px);
-    box-shadow: 0px 20px 50px rgba(74, 144, 226, 0.4);
-    background-color: #eef5fd;
-    /* Fondo más claro para el plan profesional */
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0px 20px 50px rgba(74, 144, 226, 0.4);
+  background-color: #eef5fd;
+  /* Fondo más claro para el plan profesional */
 }
 
 /* Animación suave de aparición para el plan profesional */
 @keyframes subir {
-    from {
-        transform: translateY(200px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
 /* Estilo para el plan profesional */
 .profesional {
-    transform: scale(1.05);
-    border: 4px solid #4A90E2;
-    box-shadow: 0px 10px 30px rgba(74, 144, 226, 0.3);
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease;
+  transform: scale(1.05);
+  border: 4px solid #4A90E2;
+  box-shadow: 0px 10px 30px rgba(74, 144, 226, 0.3);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease;
 }
 
 /* Animación de entrada para cuando el plan profesional se destaca */
 .profesional.destacado {
-    animation: subir 1s ease-out;
+  animation: subir 1s ease-out;
 }
 
 /* Sombra y efecto de escala cuando el plan se destaca */
 .profesional.destacado:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 12px 35px rgba(74, 144, 226, 0.5);
+  transform: scale(1.08);
+  box-shadow: 0px 12px 35px rgba(74, 144, 226, 0.5);
 }
 
 /* ---------------- IMAGEN HERO ---------------- */
-
 .inicio__head__side img {
-    opacity: 0;
-    transform: translateX(100px);
-    animation: fadeInSlideRight 1s ease-out forwards;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeInSlideRight 1s ease-out forwards;
 }
 
 @keyframes fadeInSlideRight {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* --------------- CARTAS PASOS --------------- */
-
-.carta--pasos {
+  from {
     opacity: 0;
-    /* Empieza invisible */
-    transform: translateX(100px);
-    /* Empieza desplazada a la derecha */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    /* Transición suave */
-}
-
-.carta--pasos.visible {
+    transform: translateX(200px);
+  }
+  to {
     opacity: 1;
-    /* Hace que se vea */
     transform: translateX(0);
-    /* Se desliza a su posición original */
+  }
 }
-
 /* --------------- FOOTER --------------- */
 .footer {
-    opacity: 0; /* Empieza invisible */
-    transform: translateY(50px); /* Empieza desplazado hacia abajo */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición suave */
-  }
-  
-  .footer--visible {
-    opacity: 1; /* Hace que se vea */
-    transform: translateY(0); /* Se desliza a su posición original */
-  }
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.footer--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=animations.css.map */

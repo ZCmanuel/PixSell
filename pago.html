@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - PixSell</title>
+    <title>Login - PixSell</title>
 
     <link rel="icon" href="assets/img/icons/lente.png" type="image/x-icon">
 
@@ -17,82 +17,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body>
     <header>
+
         <nav class="navIcon">
             <a href="index.html" class="navIcon__logo">
                 <img src="assets/img/imgs/logo.png" alt="Logo de PixSell">
             </a>
         </nav>
+
     </header>
 
     <main>
+
         <section class="formulario">
 
-            <h1>Registrarse</h1>
+            <h1>Finalizar pago</h1>
 
-            <div class="progreso">
-                <div class="progreso__paso" id="paso1"></div>
-                <div class="progreso__paso" id="paso2"></div>
-            </div>
+            <form action="" id="formPago">
 
-            <form action="" class="form__login" id="formRegistro">
-                <!--  Paso 1 del formulario -->
-                <div class="formulario__pasos" id="formPaso1">
+                <div id="PagoInvalido" class="formulario__pasos">
 
                     <div class="formulario--campo">
-                        <label for="Nombreregistro">Nombre</label>
-                        <input type="text" id="Nombreregistro" name="Nombreregistro" placeholder="Nombre">
-                    </div>
-
-
-                    <div class="formulario--campo">
-                        <label for="ApellidosRegistro">Apellidos</label>
-                        <input type="text" id="ApellidosRegistro" name="ApellidosRegistro" placeholder="Apellidos ">
+                        <label for="metodo-pago">Método de Pago</label>
+                        <p>Mastercard / Tarjeta de crédito</p>
                     </div>
 
                     <div class="formulario--campo">
-                        <button type="button" id="siguietePaso" class="btn--primario btn">Siguiente</button>
-                    </div>
-
-
-                </div>
-
-                <!--  Paso 2 del formulario -->
-                <div class="formulario__pasos oculto" id="formPaso2">
-                    <div class="formulario--campo">
-                        <label for="CorreoRegistro">Correo electrónico</label>
-                        <input type="email" id="CorreoRegistro" name="CorreoRegistro" placeholder="@gmail.com">
-                    </div>
-
-
-                    <div class="formulario--campo">
-                        <label for="passwordRegistro">Contraseña</label>
-                        <input type="password" id="passwordRegistro" name="passwordRegistro" placeholder="password ">
+                        <label for="nameTargeta">Nombre</label>
+                        <input type="text" id="nombreTarjeta" name="name" placeholder="Nombre en la tarjeta">
                     </div>
 
                     <div class="formulario--campo">
-                        <label for="confirmPassRegistro">Confirma la contraseña</label>
-                        <input type="password" id="confirmPassRegistro" name="confirmPassRegistro"
-                            placeholder="password ">
+                        <label for="ApellidosTrageta">Apellidos</label>
+                        <input type="text" id="ApellidosTrageta" name="Apellidos" placeholder="Apellidos en la tarjeta">
                     </div>
 
                     <div class="formulario--campo">
-                        <button type="submit" class="btn btn--primario">Registrarse</button>
+                        <label for="tarjeta-numero">Número de Tarjeta</label>
+                        <input type="text" id="tarjeta-numero" name="tarjeta-numero" placeholder="XXXX XXXX XXXX XXXX"
+                            required>
+                    </div>
+
+                    <div class="formulario--campo">
+                        <label for="tarjeta-fecha">Fecha de Expiración</label>
+                        <input type="text" id="tarjeta-fecha" name="tarjeta-fecha" placeholder="MM/AA">
+                    </div>
+
+                    <div class="formulario--campo">
+                        <label for="tarjeta-cvc">CVC</label>
+                        <input type="text" id="tarjeta-cvc" name="tarjeta-cvc" placeholder="XXX">
+                    </div>
+
+                    <div class="formulario--campo">
+                        <button type="submit" id="pagar" class="btn btn--primario ">Finalizar pago</button>
                     </div>
 
                 </div>
 
-                <div class="form__paso oculto" id="ResgitroExitoso">
-                    <img src="assets/img/icons/check.png" alt="Registro exitoso">
+
+                <div class="form__paso oculto" id="PagoValidado">
+                    <img src="assets/img/icons/check.png" alt="Formulario Validado">
                 </div>
+
             </form>
 
         </section>
+
+
+
     </main>
 
     <footer class="footer">
@@ -116,7 +111,7 @@
             </div>
 
             <!-- Información útil -->
-            <section class="footer__info">
+            <div class="footer__info">
 
                 <div class="footer__links footer__section">
                     <h4>Enlaces Rápidos</h4>
@@ -143,20 +138,17 @@
                         <li><strong>Teléfono: </strong> +34 123 456 789</li>
                     </ul>
                 </div>
-            </section>
+            </div>
 
         </div>
         <p class="footer__copy">&copy; 2025 PixSell. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JustValidate debe cargarse antes que los scripts personalizados -->
     <script src="https://cdn.jsdelivr.net/npm/just-validate@4.3.0/dist/just-validate.production.min.js" defer></script>
-
-    <!-- Luego carga los scripts personalizados -->
     <script src="js/main.js"></script>
     <script src="js/validation.js"></script>
 
-    <!-- Hotjar Tracking Code for https://zcmanuel.github.io/PixSell-V1/ -->
+
     <script>
         (function (h, o, t, j, a, r) {
             h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
