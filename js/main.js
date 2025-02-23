@@ -47,20 +47,21 @@ cartasPasos.forEach(carta => {
 const observerConfig = {
     root: null, // Observamos en el viewport
     threshold: 0.2 // El footer será visible cuando al menos el 20% del elemento esté en el viewport
-  };
-  
-  // Creamos el IntersectionObserver
-  const scrollObserver = new IntersectionObserver((entries, observer) => {
+};
+
+// Creamos el IntersectionObserver
+const scrollObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('footer--visible'); // Activamos la animación cuando el elemento es visible
-        observer.unobserve(entry.target); // Dejamos de observar el footer una vez que es visible
-      }
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer--visible'); // Activamos la animación cuando el elemento es visible
+            observer.unobserve(entry.target); // Dejamos de observar el footer una vez que es visible
+        }
     });
-  }, observerConfig);
-  
-  // Seleccionamos el footer
-  const footerElement = document.querySelector('.footer');
-  
-  // Comenzamos a observar el footer
-  scrollObserver.observe(footerElement);
+}, observerConfig);
+
+// Seleccionamos el footer
+const footerElement = document.querySelector('.footer');
+
+// Comenzamos a observar el footer
+scrollObserver.observe(footerElement);
+
