@@ -65,3 +65,12 @@ const footerElement = document.querySelector('.footer');
 // Comenzamos a observar el footer
 scrollObserver.observe(footerElement);
 
+// Script para mostrar y ocultar los enlaces de la hamburguesa
+const hamburger = document.querySelector('.navbar_hamburguesa');
+const links = document.querySelector('.navbar__links');
+const actions = document.querySelector('.navbar__actions');
+
+hamburger.addEventListener('click', () => {
+    links.classList.toggle('active');
+    actions.classList.toggle('active');
+});

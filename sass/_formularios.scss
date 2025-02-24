@@ -24,6 +24,15 @@
     }
 
 
+    @media (max-width: 768px) {
+        width: 80%; /* Ajustamos el formulario al 80% del ancho en tablets */
+        padding: 30px;
+    }
+
+    @media (max-width: 480px) {
+        width: 90%; /* En móviles, el formulario ocupa el 90% del ancho */
+        padding: 20px;
+    }
 }
 
 .formulario--campo {

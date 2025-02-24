@@ -1,38 +1,105 @@
 @use 'variables' as *;
 
-*{
+* {
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 
-body{
+body {
     font-family: $fuente-texto !important;
     display: grid;
     grid-template-columns: 1fr;
     min-height: 100vh;
+    text-align: center;
+
+    @media (max-width: 767px) {
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .navbar {
+            padding: 20px 10px;  /* Ajusta el padding si es necesario */
+        }
+    
+        .navbar__links {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0; /* Asegúrate de que no haya margen extra */
+        }
+    
+        .navbar__logo {
+            padding-left: 0;  /* Asegúrate de que no haya padding extra en el logo */
+        }
+    
+        .navbar__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+    
+        .navbar_hamburguesa {
+            display: flex;
+        }
+    
+        .navbar__links.active {
+            display: flex;
+        }
+    
+        /* Ajustar tamaño del logo */
+        .navbar__logo img {
+            height: 40px;
+        }
+    }
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $fuente-titulos !important;
     color: $color-texto;
 }
 
-p{
+p {
     color: $color-texto;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem); // Se adapta al tamaño de la pantalla
     line-height: 1.8;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 50px;
     gap: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
+
+
+    @media (max-width: 768px) {
+        padding: 20px; // Reduce el padding en tablet y móvil
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 10px; // Reduce aún más el padding en móviles
+        gap: 20px;
+    }
 }
 
-// ================ PAGINAS (PROPIEDADES GENEARALES) ================
-header{
+
+header {
     position: sticky;
     top: 0;
     width: 100%;
@@ -46,10 +113,22 @@ header{
     grid-template-columns: 1fr 1fr;
     padding: 50px;
 
-    h1{
+    h1 {
         font-size: 2rem;
     }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // Cambia a una sola columna en tablets y móviles
+        text-align: center;
+        padding: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+    }
 }
+
+
 
 .inicio__head__side {
     display: flex;
@@ -58,8 +137,16 @@ header{
     align-items: center;
     gap: 80px;
 
-    img{
+    img {
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        gap: 40px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
     }
 }
 
@@ -69,26 +156,52 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 80px;
+
 }
 
 // SOLUCION
-.solution{
+.solution {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     text-align: center;
 
-    p{
+    p {
         width: 70%;
+    }
+
+    @media (max-width: 768px) {
+        p {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        p {
+            width: 100%;
+        }
     }
 }
 
-.inicio__cartas {
+.inicio__cartas,
+.inicio__razones--cartas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr); // Dos columnas en tablet
+        gap: 60px;
+        max-width: 400px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; // Una columna en móvil
+        gap: 60px;
+    }
 }
+
 
 //  POR QUE NOSOTROS 
 .inicio__razones {
@@ -98,11 +211,6 @@ header{
     gap: 50px;
 }
 
-.inicio__razones--cartas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
 
 // RESEÑAS 
 .inicio__reseñas {
@@ -117,17 +225,15 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 400px;
+    }
 }
 
 // ================ SOBRE NOSOTROS ================
-
-.abaut__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding: 50px;
-}
 
 .abaut__section {
     display: flex;
@@ -135,30 +241,59 @@ header{
     gap: 30px;
     width: 70%;
     margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        text-align: center; // Centrar contenido en móviles
+    }
 }
 
 .producto__cartas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); // Tablets grandes
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // Tablets y móviles grandes
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; // Una columna en móviles pequeños
+        gap: 20px;
+    }
 }
 
 .abaut__main .carta--secundaria {
     width: auto;
+    max-width: 100%; // Evita desbordes en móviles
 }
 
 .valores__cartas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // Dos columnas en tablet
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; // Una sola columna en móviles
+        gap: 20px;
+    }
 }
 
 // ================ COMO FUNCIONA ================
-.function__main {
-    align-items: center;
-    padding: 50px;
-}
-
 .function__pasos {
     width: 80%;
     display: grid;
@@ -168,6 +303,25 @@ header{
     img {
         width: 80%;
     }
+
+    @media (max-width: 768px) {
+        width: 90%; // Hacerla un poco más ancha en tablets
+        grid-template-columns: 1fr; // Cambiar a una sola columna
+        text-align: center; // Centrar contenido en móviles
+
+        img {
+            width: 60%; // Ajustar tamaño de imagen en tablet
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 100%; // Ocupa todo el ancho en móviles
+        gap: 30px;
+
+        img {
+            width: 70%; // Imagen más grande en móviles pequeños
+        }
+    }
 }
 
 .function__cta {
@@ -176,33 +330,44 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 50px;
+
+    @media (max-width: 768px) {
+        gap: 30px;
+        padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
+        padding: 10px;
+    }
 }
 
 // ================ PLANES ================
-.planes__main {
-    width: 70%;
+
+
+.planes__info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-self: center;
-    text-align: center;
-    gap: 50px;
-    padding: 50px;
-}
-
-.planes__info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-/* Cartas de planes (precios) */
-.planes__info {
-    display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 50px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column; // Cambia a columna en tablets
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column; // Cambia a columna en móviles
+        width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        gap: 20px;
+    }
 }
+
+
 
 /* Lista con icono en verde */
 .cartas--planes li {
@@ -211,6 +376,10 @@ header{
     align-items: center;
     padding: 8px;
     justify-content: start;
+
+    @media (max-width: 480px) {
+        padding: 5px; // Reducir padding en móviles pequeños
+    }
 }
 
 .cartas--planes li::before {
@@ -221,44 +390,75 @@ header{
     margin-right: 10px;
 }
 
-.cartas--planes__btn .btn { 
+.cartas--planes__btn .btn {
+    width: 30%;
     display: inline-block;
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 25px;
     text-decoration: none;
     transition: 0.3s;
+
+    @media (max-width: 480px) {
+        padding: 15px 25px; // Botón más grande en móviles
+        font-size: 1.1rem;
+    }
 }
 
 // ================ CONTACTO ================
-.contacto__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
 
-}
 
 .contacto__info {
     padding: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // Cambiar a una sola columna en tablets y móviles
+        gap: 30px;
+        padding: 25px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
+        padding: 15px;
+    }
 }
 
 .contacto__info__soporte {
-    padding: 35px; 
+    padding: 35px;
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 15px;
+        gap: 20px;
+    }
 }
 
 .contacto__info__datos {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 480px) {
+        gap: 15px;
+    }
 }
 
 .contacto__info__mapa iframe {
     border-radius: 25px;
+    width: 100%; // Asegura que no se desborde
+    height: 300px; // Altura fija para evitar que se vea muy pequeño en móviles
+
+    @media (max-width: 480px) {
+        height: 250px; // Reducir un poco la altura en móviles pequeños
+    }
 }
