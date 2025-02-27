@@ -74,3 +74,15 @@ hamburger.addEventListener('click', () => {
     links.classList.toggle('active');
     actions.classList.toggle('active');
 });
+
+// Desplegar y ocultar las preguntas frecuentes
+document.addEventListener("DOMContentLoaded", () => {
+    const preguntas = document.querySelectorAll(".faq__pregunta");
+
+    preguntas.forEach(pregunta => {
+        pregunta.addEventListener("click", () => {
+            const item = pregunta.parentNode;
+            item.classList.toggle("activo");
+        });
+    });
+});
