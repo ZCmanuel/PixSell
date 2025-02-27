@@ -458,3 +458,64 @@ header {
         height: 250px; // Reducir un poco la altura en móviles pequeños
     }
 }
+
+// PREGUNTAS FRECUENTES
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: $fuente-texto;
+
+    &__contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        border-bottom: 1px solid $color-secundario;
+        padding-bottom: 10px;
+
+        &.activo {
+            .faq__respuesta {
+                display: block;
+                opacity: 1;
+                max-height: 300px;
+                padding-top: 5px;
+                transition: opacity 0.3s ease, max-height 0.3s ease;
+            }
+
+            .faq__pregunta {
+                color: $color-secundario;
+            }
+        }
+    }
+
+    &__pregunta {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        font-family: $fuente-titulos;
+
+        &:hover {
+            color: $color-secundario;
+        }
+    }
+
+    &__respuesta {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        font-size: 16px;
+        color: $color-texto;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+}
