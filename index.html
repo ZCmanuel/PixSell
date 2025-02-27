@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
 
-     <!-- Microdatos para SEO -->
-     <script type="application/ld+json">
+    <!-- Microdatos para SEO -->
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -27,7 +27,12 @@
                     "@type": "ImageObject",
                     "url": "assets/img/imgs/logo.png"
                 }
-            }
+            },
+            "sameAs": [
+                "https://www.facebook.com/PixSell",
+                "https://www.instagram.com/PixSell",
+                "https://www.linkedin.com/company/PixSell"
+            ]
         }
     </script>
 
@@ -53,23 +58,19 @@
     <meta name="twitter:description" content="PixSell es la plataforma ideal para fotógrafos y videógrafos que buscan vender productos fotográficos personalizados. ¡Haz crecer tu negocio de manera fácil!">
     <meta name="twitter:image" content="assets/img/imgs/logo.png">
     <meta name="twitter:url" content="https://www.pixsell.com">
+
     <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- MEJORAS A IMPLEMENTAR -->
-    <!-- PAGINA - AREA CLIENTE -->
-    <!-- PAGINA - CHAT BOT QUE RESPONDE DUDAS O PREGUNTAS FRECUENTES -->
     <header>
         <nav class="navbar">
             <a href="index.html" class="navbar__logo">
                 <img src="assets/img/imgs/logo.png" alt="Logo de PixSell">
             </a>
-
             <ul class="navbar__links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -78,12 +79,10 @@
                 <li><a href="Preguntas.html">Preguntas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-
             <div class="navbar__actions">
                 <a href="registro.html" class="btn btn--primario">Registrarse</a>
                 <a href="login.html" class="btn btn--secundario">Iniciar Sesión</a>
             </div>
-
             <div class="navbar_hamburguesa oculto">
                 <div class="barra"></div>
                 <div class="barra"></div>
@@ -92,133 +91,92 @@
         </nav>
     </header>
 
-
     <main class="inicio__main">
-
         <section class="inicio__head">
-
             <div class="inicio__head__side">
                 <h1>Vende Productos Fotográficos Personalizados con Facilidad</h1>
-                <p>La plataforma para fotógrafos y videógrafos que convierte tus fotos y videos en productos únicos y
-                    personalizados.
-                </p>
-
+                <p>La plataforma para fotógrafos y videógrafos que convierte tus fotos y videos en productos únicos y personalizados.</p>
                 <a href="registro.html" class="btn btn--primario">Regístrate</a>
             </div>
-
             <div class="inicio__head__side">
                 <img src="assets/img/imgs/mokup.png" alt="mokup Area Clientes">
             </div>
-
         </section>
 
         <section class="inicio__pasos">
-
             <h2>Tu Negocio Fotográfico en Tres Pasos</h2>
-
             <div class="inicio__cartas">
-
                 <div class="carta carta--principal">
                     <h3>Sube tus Fotos y Videos</h3>
                     <p>Organiza tu trabajo en categorías y permite que tus clientes accedan fácilmente.</p>
                     <img src="assets/img/icons/subir.png" alt="Subir Fotos">
                 </div>
-
                 <div class="carta carta--principal">
                     <h3>Tus Clientes Seleccionan y Personalizan</h3>
                     <p>Ofrece una variedad de productos como álbumes, marcos y posters personalizables.</p>
                     <img src="assets/img/icons/compra.png" alt="Añadir al Carrito">
                 </div>
-
                 <div class="carta carta--principal">
                     <h3>Venta y Entrega Rápida</h3>
                     <p>Tus clientes pagan de forma segura y reciben productos de alta calidad.</p>
                     <img src="assets/img/icons/tragetapago.png" alt="Compra finalizada">
                 </div>
-
             </div>
-
             <a href="registro.html" class="btn btn--primario">Regístrate</a>
-
         </section>
 
         <section class="solution">
             <h2>La Solución para Fotógrafos y Videógrafos</h2>
-            <p>
-                PixSell es una plataforma diseñada para fotógrafos y videógrafos profesionales que buscan vender
-                productos personalizados de manera sencilla. Con nuestra herramienta, puedes subir fotos y videos,
-                ofrecer álbumes, marcos, posters y más, mientras tus clientes exploran, seleccionan y compran sus
-                recuerdos personalizados desde cualquier dispositivo.
-            </p>
+            <p>PixSell es una plataforma diseñada para fotógrafos y videógrafos profesionales que buscan vender productos personalizados de manera sencilla. Con nuestra herramienta, puedes subir fotos y videos, ofrecer álbumes, marcos, posters y más, mientras tus clientes exploran, seleccionan y compran sus recuerdos personalizados desde cualquier dispositivo.</p>
         </section>
-
-
 
         <section class="inicio__razones">
             <h2>¿Por qué elegir PixSell?</h2>
-
             <div class="inicio__razones--cartas">
                 <div class="carta carta--secundaria">
                     <h3>Gestión fácil de fotos y videos</h3>
                     <p>Sube y organiza tu trabajo en minutos.</p>
                 </div>
-
                 <div class="carta carta--secundaria">
                     <h3>Variedad de productos personalizados</h3>
                     <p>Álbumes, posters, marcos y más.</p>
                 </div>
-
                 <div class="carta carta--secundaria">
                     <h3>Interfaz intuitiva</h3>
-                    <p>Plataforma intutitiva para fotógrafos y clientes.</p>
+                    <p>Plataforma intuitiva para fotógrafos y clientes.</p>
                 </div>
-
                 <div class="carta carta--secundaria">
                     <h3>Procesos de pago seguros</h3>
-                    <p>Compras seguras y accesibles paraclientes.</p>
+                    <p>Compras seguras y accesibles para clientes.</p>
                 </div>
-
                 <div class="carta carta--secundaria">
                     <h3>Optimizado para móviles</h3>
                     <p>Accede fácilmente desde cualquier dispositivo.</p>
                 </div>
-
                 <div class="carta carta--secundaria">
                     <h3>Monetización sin esfuerzo</h3>
                     <p>Vende tus productos sin una tienda física.</p>
                 </div>
             </div>
-
         </section>
 
         <section class="inicio__reseñas">
             <h2>Historias de Éxito con PixSell</h2>
-
-            <div class="inicio__reseñas__cartas ">
-
+            <div class="inicio__reseñas__cartas">
                 <div class="carta carta--reseña">
                     <img src="assets/img/imgs/reseñaMaria.png" alt="">
                     <h3>María, Fotógrafa de Bodas</h3>
-                    <p>“Desde que uso PixSell, he aumentado mis ventas de álbumes personalizados. Ahora mis clientes
-                        pueden
-                        comprar fácilmente sus recuerdos.”
-                    </p>
-
+                    <p>“Desde que uso PixSell, he aumentado mis ventas de álbumes personalizados. Ahora mis clientes pueden comprar fácilmente sus recuerdos.”</p>
                 </div>
-
                 <div class="carta carta--reseña">
                     <img src="assets/img/imgs/reseñaJose.png" alt="">
                     <h3>José, Videógrafo de Eventos</h3>
-                    <p>
-                        “Me encantó la experiencia de compra en PixSell. Elegí mis fotos favoritas y recibí un álbum
-                        increíble en pocos días.”
-                    </p>
-
+                    <p>“Me encantó la experiencia de compra en PixSell. Elegí mis fotos favoritas y recibí un álbum increíble en pocos días.”</p>
                 </div>
             </div>
-
         </section>
     </main>
+
 
 
 
