@@ -9,14 +9,10 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
-  text-align: center;
 }
 @media (max-width: 767px) {
-  body {
-    /* Ajustar tamaño del logo */
-  }
   body body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
   body .navbar {
@@ -35,8 +31,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0; /* Asegúrate de que no haya margen extra */
   }
-  body .navbar__logo {
-    padding-left: 0; /* Asegúrate de que no haya padding extra en el logo */
+  body .navbar__links .active {
+    display: flex;
   }
   body .navbar__actions {
     display: flex;
@@ -47,8 +43,8 @@ body {
   body .navbar_hamburguesa {
     display: flex;
   }
-  body .navbar__links.active {
-    display: flex;
+  body .navbar__logo {
+    padding-left: 0; /* Asegúrate de que no haya padding extra en el logo */
   }
   body .navbar__logo img {
     height: 40px;
@@ -120,7 +116,6 @@ header {
     padding: 20px;
   }
 }
-
 .inicio__head__side {
   display: flex;
   flex-direction: column;
@@ -294,7 +289,7 @@ header {
 .function__pasos img {
   width: 80%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
   .function__pasos {
     width: 90%;
     grid-template-columns: 1fr;
