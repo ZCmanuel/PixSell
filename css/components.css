@@ -67,7 +67,7 @@
     display: flex;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1255px) {
   .navbar {
     /* Los enlaces de navegación se esconden en móviles */
     /* Mostrar el menú hamburguesa */
@@ -502,20 +502,33 @@
 }
 
 .carta--pasos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(to bottom, #c1c1c1, #faf8f8);
   border-radius: 25px;
+  padding: 20px;
 }
 .carta--pasos img {
-  width: 80%;
+  width: 50%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1255px) {
   .carta--pasos {
-    grid-template-columns: 1fr;
-    text-align: center;
+    width: 70%;
+    /* Centrar el contenido */
+    margin: 0 auto;
   }
+}
+.carta--pasos__contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.carta--pasos__contenido p {
+  text-align: start;
 }
 
 .cartas--planes {
@@ -545,17 +558,17 @@
 }
 @media (max-width: 1024px) {
   .cartas--planes {
-    width: 30%;
+    width: 50%;
   }
 }
 @media (max-width: 768px) {
   .cartas--planes {
-    width: 80%;
+    width: 60%;
   }
 }
 @media (max-width: 480px) {
   .cartas--planes {
-    width: 80%;
+    width: 70%;
   }
 }
 

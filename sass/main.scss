@@ -10,54 +10,51 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     min-height: 100vh;
-    text-align: center;
+
 
     @media (max-width: 767px) {
         body {
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
         }
     
         .navbar {
             padding: 20px 10px;  /* Ajusta el padding si es necesario */
-        }
-    
-        .navbar__links {
-            display: none;
-            flex-direction: column;
-            gap: 20px;
-            position: absolute;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 0; /* Asegúrate de que no haya margen extra */
-        }
-    
-        .navbar__logo {
-            padding-left: 0;  /* Asegúrate de que no haya padding extra en el logo */
-        }
-    
-        .navbar__actions {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-    
-        .navbar_hamburguesa {
-            display: flex;
-        }
-    
-        .navbar__links.active {
-            display: flex;
-        }
-    
-        /* Ajustar tamaño del logo */
-        .navbar__logo img {
-            height: 40px;
+
+            &__links {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin: 0; /* Asegúrate de que no haya margen extra */
+
+                .active {
+                    display: flex;
+                }
+            }
+            &__actions {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            &_hamburguesa {
+                display: flex;
+            }
+
+            &__logo {
+                padding-left: 0;  /* Asegúrate de que no haya padding extra en el logo */
+                img{
+                    height: 40px;
+                }
+            }
         }
     }
 }
@@ -126,27 +123,25 @@ header {
     @media (max-width: 480px) {
         padding: 20px;
     }
-}
 
-
-
-.inicio__head__side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-
-    img {
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        gap: 40px;
-    }
-
-    @media (max-width: 480px) {
-        gap: 20px;
+    &__side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    
+        img {
+            width: 100%;
+        }
+    
+        @media (max-width: 768px) {
+            gap: 40px;
+        }
+    
+        @media (max-width: 480px) {
+            gap: 20px;
+        }
     }
 }
 
@@ -172,6 +167,7 @@ header {
     }
 
     @media (max-width: 768px) {
+
         p {
             width: 90%;
         }
@@ -301,10 +297,10 @@ header {
     gap: 50px;
 
     img {
-        width: 80%;
+        width: 80%; 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1250px) {
         width: 90%; // Hacerla un poco más ancha en tablets
         grid-template-columns: 1fr; // Cambiar a una sola columna
         text-align: center; // Centrar contenido en móviles
