@@ -1,32 +1,62 @@
 @use 'variables' as *;
 
-
 // ======================= BOTONES ======================= 
 .btn--primario {
     border: none;
     background-color: $color-boton;
     border-radius: 25px;
     padding: 10px 20px;
-
     color: white;
-} 
+
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        max-width: 80px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px;
+        width: 100%; // Botón ocupa todo el ancho
+        font-size: 1rem;
+    }
+}
 
 .btn--secundario {
     border: 4px solid $color-boton;
     border-radius: 25px;
     padding: 5px 10px;
-
     color: $color-boton !important;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px;
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 .btn--terciario {
     border: 2px solid $color-destacado;
     border-radius: 25px;
     padding: 5px 10px;
-
-    color: $color-destacado !important; 
+    color: $color-destacado !important;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px;
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 .btn--destacado {
@@ -34,6 +64,28 @@
     background-color: $color-destacado;
     border-radius: 25px;
     padding: 10px 20px;
-
     color: $color-primario;
+
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+}
+
+.btn {
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px 12px;
+        width: 100%;
+        font-size: 1rem;
+    }
 }

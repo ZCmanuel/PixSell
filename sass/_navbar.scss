@@ -1,64 +1,152 @@
 @use 'variables' as *;
+
 .navbar {
     background-color: transparent;
     width: auto;
     padding: 20px 30px;
-
     display: flex;
     justify-content: space-between;
-    align-content: center;
-}
-
-.navbar__logo img {
-    height: 60px;
-}
-
-.navbar__links {
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 45px;
+    position: relative;
 
-    li {
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
+    .navbar__logo img {
+        height: 60px;
     }
 
-    a {
-        color: black;
-        text-decoration: none;
-        transition: color 0.3s ease;
+    .navbar__links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
 
-        &.active {
-            background-color: #898787;
-            /* Azul marino */
-            color: white !important;
-            padding: 10px 20px;
+        li {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &.active {
+                background-color: #898787;
+                color: white !important;
+                padding: 10px 20px;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    .navbar__actions {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .navbar_hamburguesa {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px;
+
+        .barra {
+            width: 35px;
+            height: 5px;
+            background-color: $color-boton;
             border-radius: 25px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .navbar__links {
+            display: flex;
+            flex-direction: row;
+            gap: 45px;
+        }
+
+        .navbar_hamburguesa {
+            display: none;
+        }
+
+        .navbar__actions {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 767px) {
+        /* Los enlaces de navegación se esconden en móviles */
+        .navbar__links {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mostrar el menú hamburguesa */
+        .navbar_hamburguesa {
+            display: flex;
+        }
+
+        /* Mostrar los enlaces cuando la hamburguesa se activa */
+        .navbar__links.active {
+            display: flex;
+        }
+
+        /* Reducir el tamaño del logo en móviles */
+        .navbar__logo img {
+            height: 40px;
+        }
+
+        /* Reducir tamaño de los botones en móviles */
+        .navbar__actions {
+            display: none;
+        }
+
+        .btn--primario, .btn--secundario {
+            padding: 5px 12px;
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .navbar__links {
+            gap: 30px;
+        }
+
+        .navbar__actions a {
+            font-size: 0.9rem;
+        }
+
+        .navbar__links li {
+            font-size: 1rem;
+        }
+
+        .navbar_hamburguesa .barra {
+            width: 30px;
+            height: 4px;
         }
     }
 }
 
-.navbar__actions {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-
-    a{
-        text-decoration: none;
-    }
-}
-
-/* ------ NAVICON -> NAVBAR DE INICIO Y LOGIN ------*/
 .navIcon {
     width: auto;
     display: flex;
     justify-content: center;
     padding: 25px 30px;
     background-color: transparent;
-
 }
 
 .navIcon__logo img {
