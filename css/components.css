@@ -543,6 +543,7 @@
   background-color: white;
 }
 .cartas--planes li {
+  color: black;
   list-style: none;
   display: flex;
   align-items: center;
@@ -649,6 +650,30 @@
 }
 .aside__menu .aside__modo .modo--button img {
   width: 30px;
+}
+
+body.modo-oscuro {
+  background-color: #7b7b7b;
+}
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4,
+body.modo-oscuro h5,
+body.modo-oscuro h6,
+body.modo-oscuro p,
+body.modo-oscuro a,
+body.modo-oscuro li {
+  color: white;
+}
+body.modo-oscuro header {
+  background-color: #cfcfcf;
+}
+body.modo-oscuro footer {
+  background-color: #9c9c9c;
+}
+body.modo-oscuro .carta {
+  background-color: #cfcfcf;
 }
 
 .oculto {
