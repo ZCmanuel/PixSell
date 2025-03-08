@@ -1,0 +1,90 @@
+@use 'variables' as *;
+
+.aside__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 20%;
+
+    .aside__item {
+        padding: 20px;
+    }
+
+    .aside__idioma {
+        position: relative;
+        display: inline-block;
+
+        .idioma__btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            transition: transform 0.2s ease;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 30px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .idioma__lista {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 5px 0;
+            display: none;
+            width: 120px;
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                cursor: pointer;
+                transition: background 0.2s;
+
+                img {
+                    width: 25px;
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    background: #f0f0f0;
+                }
+            }
+        }
+
+        &.activo .idioma__lista {
+            display: block;
+        }
+    }
+
+    .aside__modo {
+
+        .modo--button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img{
+                width: 30px;
+            }
+        }
+    }
+}

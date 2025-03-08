@@ -578,6 +578,79 @@
   transform: scale(1.05);
 }
 
+.aside__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.aside__menu .aside__item {
+  padding: 20px;
+}
+.aside__menu .aside__idioma {
+  position: relative;
+  display: inline-block;
+}
+.aside__menu .aside__idioma .idioma__btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+.aside__menu .aside__idioma .idioma__btn img {
+  width: 30px;
+}
+.aside__menu .aside__idioma .idioma__btn:hover {
+  transform: scale(1.1);
+}
+.aside__menu .aside__idioma .idioma__lista {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 5px 0;
+  display: none;
+  width: 120px;
+}
+.aside__menu .aside__idioma .idioma__lista li {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.aside__menu .aside__idioma .idioma__lista li img {
+  width: 25px;
+  margin-right: 8px;
+}
+.aside__menu .aside__idioma .idioma__lista li:hover {
+  background: #f0f0f0;
+}
+.aside__menu .aside__idioma.activo .idioma__lista {
+  display: block;
+}
+.aside__menu .aside__modo .modo--button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+.aside__menu .aside__modo .modo--button:hover {
+  transform: scale(1.1);
+}
+.aside__menu .aside__modo .modo--button img {
+  width: 30px;
+}
+
 .oculto {
   display: none;
 }
