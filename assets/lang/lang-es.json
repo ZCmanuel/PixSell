@@ -1,0 +1,91 @@
+{
+    "header": {
+        "inicio": "Inicio",
+        "nosotros": "Sobre Nosotros",
+        "funcion": "Cómo Funciona",
+        "planes": "Planes",
+        "preguntas": "Preguntas",
+        "contacto": "Contacto",
+        "login": "Iniciar Sesión",
+        "register": "Registrarse"
+    },
+    "languaje": {
+        "es": "Español",
+        "en": "Inglés"
+    },
+    "hero": {
+        "title": "Vende Productos Fotográficos Personalizados con Facilidad",
+        "subtitle": "La plataforma para fotógrafos y videógrafos que convierte tus fotos y videos en productos únicos y personalizados",
+        "button": "resgistre"
+    },
+    "steps":{
+        "title": "Tu Negocio Fotográfico en Tres Pasos"
+    },
+    "sube":{
+        "title": "Sube tus Fotos y Videos",
+        "p": "Organiza tu trabajo en categorías y permite que tus clientes accedan fácilmente."
+    },
+    "seleccion":{
+        "title": "Tus Clientes Seleccionan y Personalizan",
+        "p": "frece una variedad de productos como álbumes, marcos y posters personalizables."
+    },
+    "venta":{
+        "title": "Venta y Entrega Rápida",
+        "p": "Tus clientes pagan de forma segura y reciben productos de alta calidad."
+    },
+    "solution":{
+        "title": "La Solución para Fotógrafos y Videógrafos",
+        "p": "PixSell es una plataforma diseñada para fotógrafos y videógrafos profesionales que buscan vender productos personalizados de manera sencilla. Con nuestra herramienta, puedes subir fotos y videos, ofrecer álbumes, marcos, posters y más, mientras tus clientes exploran, seleccionan y compran sus recuerdos personalizados desde cualquier dispositivo."
+    },
+    "razones":{
+        "title": "¿Por qué elegir PixSell?"
+    },
+    "gestion":{
+        "title": "Gestión fácil de fotos y videos",
+        "p": "Sube y organiza tu trabajo en minutos."
+    },
+    "personaliza":{
+        "title": "Variedad de productos personalizados",
+        "p": "Álbumes, posters, marcos y más."
+    },
+    "interfaz":{
+        "title": "Interfaz intuitiva",
+        "p": "Plataforma intuitiva para fotógrafos y clientes."
+    },
+    "pago":{
+        "title": "Procesos de pago seguros",
+        "p": "Compras seguras y accesibles para clientes."
+    },
+    "moviles":{
+        "title": "Optimizado para móviles",
+        "p": "Accede fácilmente desde cualquier dispositivo."
+    },
+    "monetiza":{
+        "title": "Monetización sin esfuerzo",
+        "p": "Vende tus productos sin una tienda física."
+    },
+    "reseñas":{
+        "title": "Historias de Éxito con PixSell"
+    },
+    "reseña-1":{
+        "title": "María, Fotógrafa de Bodas",
+        "p": "Desde que uso PixSell, he aumentado mis ventas de álbumes personalizados. Ahora mis clientes pueden comprar fácilmente sus recuerdos."
+    },
+    "reseña-2":{
+        "title": "José, Videógrafo de Eventos",
+        "p": "Me encantó la experiencia de compra en PixSell. Elegí mis fotos favoritas y recibí un álbum increíble en pocos días."
+    },
+    "footer": {
+        "enlaces": "Enlaces Rápidos",
+
+        "paginasLegales" : "Páginas Legales",
+        "legal": "Aviso Legal",
+        "condiciones": "Términos y Condiciones",
+        "politica": "Política de Privacidad",
+
+        "contacto":"Información de Contacto",
+        "soporte": "Soporte: soporte@pixsell.com",
+        "horario": "Horario: Lunes a Viernes: - 09:00 a 18:00 (GMT + 1)",
+        "copy": "© 2021 PixSell. Todos los derechos reservados."
+    }
+}

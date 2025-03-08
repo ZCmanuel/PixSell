@@ -87,28 +87,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Desplegable idiomas
 document.addEventListener("DOMContentLoaded", () => {
     const idiomaSeleccionado = document.getElementById("idioma-seleccionado");
     const idiomaLista = document.querySelector(".idioma__lista");
-    const langFile = "assets/lang/lang.json";
 
     // Obtener idioma guardado en LocalStorage o establecer español por defecto
     let idiomaActual = localStorage.getItem("idioma") || "es";
-    
+
     // Función para cargar los textos en el idioma seleccionado
     function cargarIdioma(idioma) {
+        const langFile = `./assets/lang/lang-${idioma}.json`;
+    
         fetch(langFile)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
-                document.querySelectorAll("[data-lang]").forEach(elemento => {
-                    const clave = elemento.getAttribute("data-lang");
-                    if (data[idioma] && data[idioma][clave]) {
-                        elemento.textContent = data[idioma][clave];
+                console.log("Datos cargados:", data); // 🔥 Para depuración
+    
+                document.querySelectorAll("[data-section]").forEach(elemento => {
+                    const section = elemento.getAttribute("data-section"); // "header"
+                    const value = elemento.getAttribute("data-value"); // "inicio"
+    
+                    if (data[section] && data[section][value]) {
+                        elemento.textContent = data[section][value];
                     }
                 });
-
-                // Guardar idioma en LocalStorage
+    
                 localStorage.setItem("idioma", idioma);
             })
             .catch(error => console.error("Error cargando idioma:", error));
