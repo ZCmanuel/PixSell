@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+// Body en modo dark
+body.modo-oscuro {
+    background-color: $color-fondo-oscuro;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    li {
+        color: $color-texto-oscuro;
+    }
+
+    header {
+        background-color: $color-cartas-oscuro;
+    }
+
+    footer{
+        background-color: $color-secundario-oscuro;
+    }
+
+    .carta {
+        background-color: $color-cartas-oscuro;
+    }
+}
